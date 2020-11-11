@@ -1,0 +1,22 @@
+export(SkaterF)
+importFrom(spdep, tri2nb)
+importFrom(spdep, nbcosts)
+importFrom(spdep, nb2listw)
+importFrom(spdep, mstree)
+importFrom(quantreg, rq)
+
+export(Awsreg)
+importFrom(GWmodel, bw.gwr)
+importFrom(GWmodel, gw.dist)
+importFrom(spdep, knn2nb)
+importFrom(plm,plm)
+
+export(Sareg)
+
+importFrom("stats", "cov", "lm", "runif", "var")
+importFrom("spdep", "knearneigh","nbdists","prunemst","get.coresOption","get.mcOption","get.ClusterOption")
+
+
+
+
+
