@@ -1,6 +1,6 @@
 
 
-SkaterF <- function(edges, data, coly, colx, ncuts, crit, method=1,ind_col) 
+SkaterF <- function(edges, data, coly, colx, ncuts, crit, method=1,ind_col, lat, long, tau.ch) 
 {
   
   if (any(class(edges) == "skater")) {
@@ -11,10 +11,10 @@ SkaterF <- function(edges, data, coly, colx, ncuts, crit, method=1,ind_col)
     n <- nrow(edges) + 1
     res <- list(groups = rep(1, n), edges.groups = list(list(node = 1:n, 
                                                              edge = edges)), not.prune = NULL, candidates = 1, 
-                ssto = sswf(data, 1:n, coly, colx, method,ind_col))
+                ssto = sswf(data, 1:n, coly, colx, method,ind_col, lat, long, tau.ch))
     res$ssw <- res$edges.groups[[1]]$ssw <- res$ssto
     tmp <- sort(prunecostf(res$edges.groups[[1]]$edge[, 1:2, 
-                                                     drop = FALSE], data, coly, colx, method,ind_col), 
+                                                     drop = FALSE], data, coly, colx, method,ind_col, lat, long, tau.ch), 
                 decreasing = TRUE, method = "quick", index.return = TRUE)
     res$edges.groups[[1]]$edge = cbind(res$edges.groups[[1]]$edge[tmp$ix, 
                                                                   ], tmp$x)
@@ -77,14 +77,14 @@ SkaterF <- function(edges, data, coly, colx, ncuts, crit, method=1,ind_col)
         gc.pruned <- lapply(g.pruned, function(e) {
           if (nrow(e$edge) == 0) 
             return(list(node = e$node, edge = matrix(0, 
-                                                     0, 3), ssw = sswf(data, e$node, coly, colx, method,ind_col)))
+                                                     0, 3), ssw = sswf(data, e$node, coly, colx, method,ind_col, lat, long, tau.ch)))
           else {
             tmp <- sort(prunecostf(e$edge[, 1:2, drop = FALSE], 
-                                  data, coly, colx, method,ind_col), decreasing = TRUE, 
+                                  data, coly, colx, method,ind_col, lat, long, tau.ch), decreasing = TRUE, 
                         method = "quick", index.return = TRUE)
             list(node = e$node, edge = cbind(e$edge[tmp$ix, 
                                                     , drop = FALSE], tmp$x), ssw = sswf(data, 
-                                                                                       e$node, coly, colx, method,ind_col))
+                                                                                       e$node, coly, colx, method,ind_col, lat, long, tau.ch))
           }
         })
         res$edges.groups[[dc[k, 1]]] <- gc.pruned[[1]]

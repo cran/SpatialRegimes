@@ -1,0 +1,6 @@
+
+SpatialRegimes v1.0 (Release date: 2022-4-2)
+==============
+Changes:
+
+* Introduced the quantile estimator (method = 2) within the SkaterF function 

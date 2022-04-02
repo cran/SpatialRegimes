@@ -1,9 +1,9 @@
 \name{Sareg}
 \alias{Sareg}
 
-\title{Spatial constrained clusterwise regression by a constrained version of the Simulated Annealing}
+\title{Spatial clusterwise regression by a constrained version of the Simulated Annealing}
 
-\description{This function implements a spatial constrained clusterwise regression based on the procedure suggested by Postiglione \emph{et al.} (2013).}
+\description{This function implements a spatial clusterwise regression based on the procedure suggested by Postiglione \emph{et al.} (2013).}
 
 \usage{Sareg(data, coly,colx, cont, intemp, rho, niter, subit, ncl, bcont)}
 

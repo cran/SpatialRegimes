@@ -1,7 +1,7 @@
 
-prunecostf <- function(edges, data, coly, colx, method=1,ind_col) 
+prunecostf <- function(edges, data, coly, colx, method=1,ind_col, lat, long, tau.ch) 
 {
-  sswt <- sswf(data, unique(as.integer(edges)), coly, colx, method,ind_col)
+  sswt <- sswf(data, unique(as.integer(edges)), coly, colx, method,ind_col, lat, long, tau.ch)
   cores <- get.coresOption()
   if (is.null(cores)) {
     parallel <- "no"
@@ -28,7 +28,7 @@ prunecostf <- function(edges, data, coly, colx, method=1,ind_col)
                                                  pruned.ids <- prunemst(rbind(edges[i, ], edges[-i,
                                                                                                 ]), only.nodes = TRUE)
                                                  sum(sapply(pruned.ids, function(j) sswf(data,
-                                                                                        j, coly, colx, method,ind_col)))
+                                                                                        j, coly, colx, method,ind_col, lat, long, tau.ch)))
                                                }))
     }
     else {
@@ -42,7 +42,7 @@ prunecostf <- function(edges, data, coly, colx, method=1,ind_col)
         pruned.ids <- prunemst(rbind(edges[i, ], edges[-i,
                                                        ]), only.nodes = TRUE)
         sum(sapply(pruned.ids, function(j) sswf(data,
-                                               j, coly, colx, method,ind_col)))
+                                               j, coly, colx, method,ind_col, lat, long, tau.ch)))
       }, mc.cores = ncpus)
       sswp <- do.call("c", out)
     }
@@ -55,7 +55,7 @@ prunecostf <- function(edges, data, coly, colx, method=1,ind_col)
       pruned.ids <- prunemst(rbind(edges[i, ], edges[-i,
                                                      ]), only.nodes = TRUE)
       
-        sum(sapply(pruned.ids, function(j) sswf(data, j, coly, colx, method,ind_col))) #ORIGINALE
+        sum(sapply(pruned.ids, function(j) sswf(data, j, coly, colx, method,ind_col, lat, long, tau.ch))) #ORIGINALE
 
       # sumparz = matrix(NA, nrow = length(pruned.ids), ncol=1)      
       # for (k in 1:length(pruned.ids)) {

@@ -1,9 +1,9 @@
 \name{Awsreg}
 \alias{Awsreg}
 
-\title{Spatial constrained clusterwise regression by an iterated spatially weighted regression algorithm}
+\title{Spatial clusterwise regression by an iterated spatially weighted regression algorithm}
 
-\description{This function implements a spatial constrained clusterwise regression based on the procedure suggested by Andreano \emph{et al.} (2017) and Bille' \emph{et al.} (2017).}
+\description{This function implements a spatial clusterwise regression based on the procedure suggested by Andreano \emph{et al.} (2017) and Bille' \emph{et al.} (2017).}
 
 \usage{Awsreg(data, coly,colx,kernel,kernel2,coords,bw,tau,niter,conv,eta,numout,sout)}
 

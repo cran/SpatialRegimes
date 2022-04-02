@@ -5,7 +5,7 @@
 
 \description{This function implements a spatial constrained clusterwise regression based on the Skater procedure by Assuncao et al. (2002).}
 
-\usage{SkaterF(edges,data,coly,colx,ncuts,crit,method,ind_col)}
+\usage{SkaterF(edges,data,coly,colx,ncuts,crit,method=1,ind_col,lat,long,tau.ch)}
 
 \arguments{
   \item{edges}{A matrix with 2 colums with each row is an edge.}
@@ -14,8 +14,11 @@
   \item{colx}{The covariates in the c("x1","x2") form.}
   \item{ncuts}{The number of cuts.}
   \item{crit}{A scalar or two dimensional vector with with criteria for groups. Examples: limits of group size or limits of population size. If scalar, is the minimum criteria for groups.}
-  \item{method}{1 (default) for OLS.}
+  \item{method}{1 (default) for OLS, 2 for Quantile regression}
   \item{ind_col}{Parameter still not used in this version.}
+  \item{lat}{Parameter still not used in this version.}
+  \item{long}{Parameter still not used in this version.}
+  \item{tau.ch}{Chosen quantile (for method = 2).}
 }
 
 
@@ -33,9 +36,9 @@ A object of skaterF class with:
 \author{F. Vidoli}
 
 \references{
-Assuncao, R.M., Lage J.P., and Reis, E.A. (2002). Analise de conglomerados espaciais via arvore geradora minima. Revista Brasileira de Estatistica, 62, 1-23.
 
-Assuncao, R. M, Neves, M. C., Camara, G. and Freitas, C. da C. (2006). Efficient regionalization techniques for socio-economic geographical units using minimum spanning trees. International Journal of Geographical Information Science Vol. 20, No. 7, August 2006, 797-811
+F. Vidoli, G. Pignataro and R. Benedetti "\emph{Identification of spatial regimes of the production function of Italian hospitals through spatially constrained cluster-wise regression}", Socio-Economic Planning Sciences (in press) https://doi.org/10.1016/j.seps.2022.101223
+
 }
 
 %\seealso{ \code{\link{ci_bod}}, \code{\link{ci_mpi}}}
@@ -61,6 +64,7 @@ crit1 = 10
 coly1 = c("y_ols")
 colx1 = c("A","L","K")
 
+# OLS
 sk = SkaterF(edges = edges1, 
               data= SimData, 
               coly = coly1,
@@ -70,5 +74,19 @@ sk = SkaterF(edges = edges1,
               method=1)
 			  
 SimData$regimes = sk$groups
-plot(lat~long,SimData,col=regimes,pch=16)              
+# plot(lat~long,SimData,col=regimes,pch=16)   
+
+## quantile 0.8
+# sk2 = SkaterF(edges = edges1, 
+#              data= SimData, 
+#              coly = coly1,
+#              colx= colx1, 
+#              ncuts=ncuts1, 
+#              crit=crit1,
+#              method=2,tau.ch=0.8)
+#			  
+# SimData$regimes_q = sk2$groups
+# plot(lat~long,SimData,col=regimes_q,pch=16)   
+
+
 }

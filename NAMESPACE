@@ -10,13 +10,14 @@ importFrom(GWmodel, bw.gwr)
 importFrom(GWmodel, gw.dist)
 importFrom(spdep, knn2nb)
 importFrom(plm,plm)
+importFrom(spatialreg,errorsarlm)
 
 export(Sareg)
 
 importFrom("stats", "cov", "lm", "runif", "var")
 importFrom("spdep", "knearneigh","nbdists","prunemst","get.coresOption","get.mcOption","get.ClusterOption")
 
-
+importFrom("stats", "as.formula")
 
 
 

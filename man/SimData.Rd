@@ -22,7 +22,7 @@ For each regime, finally, a different (in the coefficients) spatial function is 
 More in particular, we set 5 different vectors of parameters (including the intercept): beta1 = (13,0.5,0.3,0.2), beta2 = (11,0.8,0.1,0.1), beta3 = (9,0.3,0.2,0.5), beta4 = (7,0.4,0.3,0.3) and beta5 = (5,0.2,0.6,0.2) and a normally distributed error term in N(0,1).
 }
 
-\references{F. Vidoli, G. Pignataro, R. Benedetti, F. Pammolli, "\emph{Spatially constrained cluster-wise regression: optimal territorial areas in Italian health care}", forthcoming
+\references{F. Vidoli, G. Pignataro and R. Benedetti "\emph{Identification of spatial regimes of the production function of Italian hospitals through spatially constrained cluster-wise regression}", Socio-Economic Planning Sciences (in press) https://doi.org/10.1016/j.seps.2022.101223
 }
 
 \author{Vidoli F.}
