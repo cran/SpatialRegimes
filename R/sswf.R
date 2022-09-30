@@ -9,7 +9,7 @@ sswf <- function(data, id, coly, colx, method=1,ind_col, lat, long, tau.ch)
     ### OLS
     
     if (method == 1)
-       return(sum(abs(lm(dy ~ ., data = dyx[id,])$residuals)))
+       return(sum((lm(dy ~ ., data = dyx[id,])$residuals)^2))
 
     ### QUANTILE 
 

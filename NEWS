@@ -1,4 +1,13 @@
 
+
+SpatialRegimes v1.1 (Release date: 2022-9-30)
+==============
+Changes:
+
+* Fixed error in SkaterF function for OLS estimators.
+
+
+
 SpatialRegimes v1.0 (Release date: 2022-4-2)
 ==============
 Changes:
