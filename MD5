@@ -1,6 +1,6 @@
-7c471c30c47a2002bf5080b3fea8a60a *DESCRIPTION
+aeb287a3a7dfe347c801b3f6c1098e28 *DESCRIPTION
 119026b5ac21bcbcc190916b1620e122 *NAMESPACE
-5551f0020fed5adaa1bfcec2b82bffd3 *NEWS
+61fed4869aa5ad38642063dd34240f3c *NEWS
 41221e942d4db2d7971c1e220a08f62d *R/Awsreg.R
 c63887e9307dbe606d3b1a2fe37e0fc2 *R/Sareg.r
 b7b6136c8dc24f55453f946ad600c1b6 *R/SkaterF.R
@@ -8,14 +8,14 @@ b7a4c28980fd7d0c7f1880bb90deb6eb *R/modparcov.r
 d39776e27102f3e4db48393d6d4d602b *R/ncont.r
 148037388f446b46af33438ca1b9bdbe *R/prunecostf.R
 471ba97cc14d02b47cfeb1ce06e4ae06 *R/resregby.r
-9eb458deec67aa70be44781db89d3ed6 *R/sswf.R
+8851944ec8c40d2005f1f545c38584f4 *R/sswf.R
 c22810b790d7c58ec6c72145828f13be *R/testpar.r
-2f569e1a9f8e38df48230f1a77c203c1 *build/vignette.rds
+604005917b8799c7a8b8cfb82584bf1d *build/vignette.rds
 363130d76899163f50b81560f35941dc *data/SimData.rda
 913c9f6eaf13742f32c722d3822f8c4a *inst/doc/SpatialRegimes_vignette.pdf
 ef0e6f30bac1c1a4703ad62975748319 *inst/doc/SpatialRegimes_vignette.pdf.asis
 ca1a9de9c92e2e186cea039089723dbb *man/Awsreg.Rd
 b584cecae292f89d25b97960cbddb9c0 *man/Sareg.Rd
 e7ea0e15422657ca40ae1b6680f6a9db *man/SimData.Rd
-48a92a6bcfc13546159495d6eeabce72 *man/SkaterF.Rd
+a34fbd9c46af843206f75701ef5c5443 *man/SkaterF.Rd
 ef0e6f30bac1c1a4703ad62975748319 *vignettes/SpatialRegimes_vignette.pdf.asis

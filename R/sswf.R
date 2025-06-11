@@ -22,6 +22,13 @@ sswf <- function(data, id, coly, colx, method=1,ind_col, lat, long, tau.ch)
       resid = rq(dy ~ ., data = dyx[id,], tau=tau.ch)$residuals
       return(sum(rhoq(resid, tau.ch)))
     }  
+
+    ### GLM - binomial
+    
+    #    if (method == 3)
+#      return(sum((glm(dy ~ ., data = dyx[id,], family=binomial)$residuals)^2))
+    #      return(sum(1/glm(dy ~ ., data = dyx[id,], family="binomial")$aic))
+    
     
     ### ELSE
     

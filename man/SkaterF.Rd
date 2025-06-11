@@ -14,7 +14,7 @@
   \item{colx}{The covariates in the c("x1","x2") form.}
   \item{ncuts}{The number of cuts.}
   \item{crit}{A scalar or two dimensional vector with with criteria for groups. Examples: limits of group size or limits of population size. If scalar, is the minimum criteria for groups.}
-  \item{method}{1 (default) for OLS, 2 for Quantile regression}
+  \item{method}{1 (default) for OLS, 2 for Quantile regression, 3 for logit}
   \item{ind_col}{Parameter still not used in this version.}
   \item{lat}{Parameter still not used in this version.}
   \item{long}{Parameter still not used in this version.}
@@ -37,7 +37,9 @@ A object of skaterF class with:
 
 \references{
 
-F. Vidoli, G. Pignataro and R. Benedetti "\emph{Identification of spatial regimes of the production function of Italian hospitals through spatially constrained cluster-wise regression}", Socio-Economic Planning Sciences (in press) https://doi.org/10.1016/j.seps.2022.101223
+For method = 1: F. Vidoli, G. Pignataro, and R. Benedetti. (2022) "Identification of spatial regimes of the production function of italian hospitals through spatially constrained cluster-wise regression. In: Socio-Economic Planning Sciences, page 101223, doi: https://doi.org/10.1016/j.seps.2022.101223
+
+For method = 2: Vidoli, F., Sacchi A. & Sanchez Carrera E. (2025) "Spatial regimes in heterogeneous territories: The efficiency of local public spending" In: Economic modelling https://doi.org/10.1016/j.econmod.2025.107139
 
 }
 
